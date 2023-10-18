@@ -8,7 +8,7 @@ export const CoverImage = ({ images, albumUrl }) => {
     //console.log(selectedImage);
     return (
         <div className="albumCover">
-           <a href={albumUrl}><img src={selectedUrl} alt="Album cover" /></a>
+           <a href={albumUrl}><img src={selectedUrl} alt="Album cover"/></a>
         </div>
     );
 };

@@ -1,8 +1,9 @@
-export const AlbumName = ({ name }) => {
+
+export const AlbumName = ({ name, albumUrl }) => {
     return (
-        <p className="albumName">  
-            {name}
-        </p>
+        <div className="albumName">  
+            <a href={albumUrl}><p>{name}</p></a>
+        </div>
     );
 };
 

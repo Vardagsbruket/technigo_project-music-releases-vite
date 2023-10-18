@@ -1,6 +1,6 @@
 import data from "./data.json";
 import { Album } from "./components/Album";
-import { Header } from "./components/child components/Header";
+import { Header } from "./components/Header";
 
 console.log(data);
 
@@ -23,6 +23,7 @@ export const App = () => {
           artists={artists}
           images={images}
           albumUrl={external_urls.spotify}
+          artistUrl={artists.external_urls}
         />
       )
     );
@@ -32,7 +33,7 @@ export const App = () => {
 
   return (
     <div className="App">
-      <Header />
+       <Header />
         <section className="musicOuter">{renderContent}</section>
     </div>
   );
