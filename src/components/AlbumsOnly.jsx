@@ -8,7 +8,7 @@ export const AlbumsOnly = ({name, album_type, albumUrl, images, artists}) => {
     return (
         <div className="albumsOnly">
             <AlbumsCoverImage  images={images} albumUrl={albumUrl} album_type={album_type}/>
-            <AlbumsName name={name} album_type={album_type}/>
+            <AlbumsName name={name} album_type={album_type} albumUrl={albumUrl}/>
             <AlbumsArtist artists={artists} album_type={album_type}/>
              
         </div>

@@ -6,13 +6,12 @@ export const SingleArtist = ({artists, album_type}) => {
       
     const artistNames = selectArtist.map(({name}) => name).join(", ");
     
+    const artistUrl = artists[0].external_urls.spotify;
 
-   
-    
         
     return (
         <div className="singleArtist">
-            <p>{artistNames}</p>
+            <a href={artistUrl}><p>{artistNames}</p></a>
         </div>
     )
 }
