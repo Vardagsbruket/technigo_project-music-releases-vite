@@ -34,9 +34,74 @@ h1, h2 {
   padding: 2rem;
   background-color: rgb(48, 47, 47);
 }
+
+/*-- ALBUM COVER ------------ */
 .albumCover {
   color: #ffffff;
 }
+img.darker{
+  transition: all 0.2s ease-in-out;
+}
+img.darker:hover{
+  filter: brightness(40%);
+}
+
+/* test class to set on cover in function*/
+.darkerCoverImg{
+  filter: brightness(40%);
+  transition: all 0.2s ease-in-out;
+}
+
+
+
+.icon-container{
+  display:flex;
+  justify-content:center;
+  position:absolute;
+  top:42%;
+  transition: 0.3s;
+  width:300px;
+}
+button{
+  background-color:red;
+  height:30px;
+  width:30px;
+  border:none;
+}
+button.heart{
+  background-image:url(./heart.svg);
+  background-size:contain;
+}
+button.dots{
+  background-image:url(./dots.svg);
+}
+button.play{
+  background-image:url(./play.svg);
+}
+button.heart,
+button.play,
+button.dots{
+  background-repeat:no-repeat;
+}
+.icon{
+  margin:0 10px;
+  transition: transform .2s;
+  opacity:.7;
+  /*display:none;*/
+  
+}
+
+
+.icon:hover{
+  display:block;
+  transform: scale(1.2);
+  opacity:1;
+}
+
+
+
+
+
 .albumName {
   font-family: Helvetica, sans-serif;
   font-size: 14px;
