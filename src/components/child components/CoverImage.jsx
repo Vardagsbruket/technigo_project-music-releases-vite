@@ -1,8 +1,3 @@
-import {useState} from 'react';
-
-
-
-
 export const CoverImage = ({ images, albumUrl }) => {
     const selectedImage = images.filter(
         ({height}) => height === 300
@@ -10,8 +5,6 @@ export const CoverImage = ({ images, albumUrl }) => {
     const selectedUrl = selectedImage[0].url
     //console.log(selectedImage);
 
-
-    
 
     return (
         <div className="albumCover" >
@@ -23,7 +16,6 @@ export const CoverImage = ({ images, albumUrl }) => {
            <a href={albumUrl}><img src={selectedUrl} alt="Album cover"/></a>
 
         </div>
-        
     );
 };
 
