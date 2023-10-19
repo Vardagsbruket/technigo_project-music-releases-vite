@@ -1,4 +1,4 @@
-export const Playlists = ({ description, playlistUrl, images }) => {
+export const PlaylistsNew = ({ description, playlistUrl, images }) => {
     
     const PlaylistImageUrl = images[0].url
     return (
@@ -9,7 +9,7 @@ export const Playlists = ({ description, playlistUrl, images }) => {
     );
 };
 
-Playlists.defaultProps = {
+PlaylistsNew.defaultProps = {
     components: "No album name",
 };
 
