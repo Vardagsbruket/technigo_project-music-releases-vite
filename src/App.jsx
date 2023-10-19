@@ -2,7 +2,7 @@ import data from "./data.json";
 import moreData from "./stretched-goal.json";
 //import { Album } from "./components/Album";
 import { Header } from "./components/Header";
-import { Playlists } from "./components/playlists";
+import { Playlists } from "./components/Playlists";
 import { SinglesOnly } from "./components/SinglesOnly";
 import { AlbumsOnly } from "./components/AlbumsOnly";
 import { NavBar } from "./components/NavBar";
