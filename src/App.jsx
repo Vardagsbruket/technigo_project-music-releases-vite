@@ -1,6 +1,6 @@
 import data from "./data.json";
 import moreData from "./stretched-goal.json";
-import { Album } from "./components/Album";
+//import { Album } from "./components/Album";
 import { Header } from "./components/Header";
 import { Playlists } from "./components/Playlists";
 import { SinglesOnly } from "./components/SinglesOnly";
@@ -20,21 +20,21 @@ export const App = () => {
   // oneArtist.name
 
 
-  const renderMusicInfo = () => 
-    data.albums.items.map(
-      ({id, name, artists, images, external_urls}) => (
-        <Album 
-          key={id}
-          name={name}
-          artists={artists}
-          images={images}
-          albumUrl={external_urls.spotify}
-        />
-      )
-    );
+  // const renderMusicInfo = () => 
+  //   data.albums.items.map(
+  //     ({id, name, artists, images, external_urls}) => (
+  //       <Album 
+  //         key={id}
+  //         name={name}
+  //         artists={artists}
+  //         images={images}
+  //         albumUrl={external_urls.spotify}
+  //       />
+  //     )
+  //   );
 
 
-  const renderContent = renderMusicInfo();
+  // const renderContent = renderMusicInfo();
 
 
   const renderPlaylistInfo = () => 
