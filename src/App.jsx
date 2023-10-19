@@ -2,7 +2,7 @@ import data from "./data.json";
 import moreData from "./stretched-goal.json";
 //import { Album } from "./components/Album";
 import { Header } from "./components/Header";
-import { Playlists } from "./components/Playlists";
+import { PlaylistsNew  } from "./components/PlaylistsNew";
 import { SinglesOnly } from "./components/SinglesOnly";
 import { AlbumsOnly } from "./components/AlbumsOnly";
 import { NavBar } from "./components/NavBar";
@@ -40,7 +40,7 @@ export const App = () => {
   const renderPlaylistInfo = () => 
     moreData.playlists.items.map(
       ({id, description, external_urls, images}) => (
-        <Playlists 
+        <PlaylistsNew 
           key={id}
           description={description}
           images={images}
