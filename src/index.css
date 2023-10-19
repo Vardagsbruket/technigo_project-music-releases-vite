@@ -38,60 +38,64 @@ h1, h2 {
 /*-- ALBUM COVER ------------ */
 .albumCover {
   color: #ffffff;
-}
-img.darker{
-  transition: all 0.2s ease-in-out;
-}
-img.darker:hover{
-  filter: brightness(40%);
-}
-
-/* test class to set on cover in function*/
-.darkerCoverImg{
-  filter: brightness(40%);
-  transition: all 0.2s ease-in-out;
-}
-
-
-
-.icon-container{
+  width:300px;
+  height:300px;
   display:flex;
   justify-content:center;
-  position:absolute;
-  top:42%;
-  transition: 0.3s;
-  width:300px;
+  align-items:center;
+  position:relative;
 }
+img{
+  width:300px;
+  display:block;
+  margin:auto;
+}
+
+.icon-container{
+  height:300px;
+  width:300px;
+  top:0;
+  left:0;
+  position:absolute;
+  background:rgba(0, 0, 0, 0.6);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  opacity:0;
+  transition:0.6s;
+}
+.icon-container:hover{
+  opacity:1;
+}
+
 button{
-  background-color:red;
+  background-color:transparent;
   height:30px;
   width:30px;
   border:none;
 }
 button.heart{
-  background-image:url(./heart.svg);
-  background-size:contain;
+  background-color: white;
+    -webkit-mask:  url(../src/assets/icons/heart.svg) no-repeat 50% 50%;
+    mask: url(./heart.svg) no-repeat 50% 50%;
 }
 button.dots{
-  background-image:url(./dots.svg);
+  background-color: white;
+    -webkit-mask:  url(../src/assets/icons/dots.svg) no-repeat 50% 50%;
+    mask: url(./dots.svg) no-repeat 50% 50%;
 }
 button.play{
-  background-image:url(./play.svg);
+  background-color: white;
+    -webkit-mask:  url(../src/assets/icons/play.svg) no-repeat 50% 50%;
+    mask: url(./play.svg) no-repeat 50% 50%;
 }
-button.heart,
-button.play,
-button.dots{
-  background-repeat:no-repeat;
-}
+
 .icon{
   margin:0 10px;
   transition: transform .2s;
   opacity:.7;
-  /*display:none;*/
-  
+  top:200px;
 }
-
-
 .icon:hover{
   display:block;
   transform: scale(1.2);

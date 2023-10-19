@@ -1,14 +1,6 @@
 import {useState} from 'react';
 
-function Hover() {
-    return (
-        <span className="icon-container">
-            <button className="icon heart"></button>
-            <button className="icon play"></button>
-            <button className="icon dots"></button>
-        </span>
-    );
-  }
+
 
 
 export const CoverImage = ({ images, albumUrl }) => {
@@ -18,23 +10,18 @@ export const CoverImage = ({ images, albumUrl }) => {
     const selectedUrl = selectedImage[0].url
     //console.log(selectedImage);
 
-    
-    const [isHovering, setIsHovering] = useState(false);
-    const handleMouseOver = () => {
-      setIsHovering(true);
-    };
-    const handleMouseOut = () => {
-      setIsHovering(false);
-    };
 
+    
 
     return (
-        <div className="albumCover" onMouseOver={handleMouseOver}
-        onMouseOut={handleMouseOut}>
-            
-           <a href={albumUrl}><img className="darker" src={selectedUrl} alt="Album cover"/></a>
+        <div className="albumCover" >
+            <div className="icon-container">
+                <button className="icon heart"></button>
+                <button className="icon play"></button>
+                <button className="icon dots"></button>
+            </div>
+           <a href={albumUrl}><img src={selectedUrl} alt="Album cover"/></a>
 
-           {isHovering && <Hover />}
         </div>
         
     );
