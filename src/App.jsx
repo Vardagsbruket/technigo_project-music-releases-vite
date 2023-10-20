@@ -7,7 +7,6 @@ import { SinglesOnly } from "./components/SinglesOnly";
 import { AlbumsOnly } from "./components/AlbumsOnly";
 import { NavBar } from "./components/NavBar";
 
-
 console.log(data);
 
 export const App = () => {
@@ -68,7 +67,7 @@ export const App = () => {
 
     const renderAlbumsInfo = () => 
       data.albums.items.map(
-        ({id, name, album_type, artists, images, external_urls}) => (
+        ({id, name, album_type, artists, images, external_urls, release_date, total_tracks}) => (
           <AlbumsOnly 
             key={id}
             name={name}
@@ -76,6 +75,8 @@ export const App = () => {
             images={images}
             albumUrl={external_urls.spotify}
             album_type={album_type}
+            release_date={release_date}
+            total_tracks={total_tracks}
           />
         )
       );

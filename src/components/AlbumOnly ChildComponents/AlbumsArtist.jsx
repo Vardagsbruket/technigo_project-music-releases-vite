@@ -1,4 +1,4 @@
-export const AlbumsArtist = ({artists, album_type}) => {
+export const AlbumsArtist = ({artists, album_type, release_date, total_tracks}) => {
 
     const selectArtist = album_type === "album" ? artists : [];
    
@@ -13,6 +13,8 @@ export const AlbumsArtist = ({artists, album_type}) => {
     return (
         <div className="albumArtist">
             <a href={artistUrl}><p>{artistNames}</p></a>
+            <p>Release date: {release_date}</p>
+            <p>Total tracks: {total_tracks}</p>
         </div>
     )
 }

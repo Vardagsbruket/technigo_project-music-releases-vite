@@ -1,3 +1,5 @@
+import { HoverEffect } from "../HoverEffect";
+
 export const AlbumsCoverImage = ({ images, albumUrl, album_type }) => {
 
     const selectedAlbumCover = images.filter(({ height }) => height === 300);
@@ -10,7 +12,11 @@ export const AlbumsCoverImage = ({ images, albumUrl, album_type }) => {
 
         return (
             <div className="albumsCover">
-                <a href={albumUrl}><img src={selectedUrl} alt="Album cover" /></a>
+                
+                <a href={albumUrl}>
+                    <HoverEffect /> 
+                    <img src={selectedUrl} alt="Album cover" />
+                </a>
             </div>
         );
 
