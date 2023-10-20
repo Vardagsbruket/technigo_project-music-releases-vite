@@ -87,18 +87,24 @@ export const App = () => {
       <div><Header /></div>
       <div><NavBar /></div>
       <div className="musicOuter">
+
         <div className="playlistOuter">
           <h2 id="playlists">Playlists</h2>
-          {renderPlaylists}
+          <div className="playlistInner">
+            {renderPlaylists}
+          </div>
         </div> 
         <div className="singles">
           <h2 id="singles">Singles</h2>
             {renderSingles}
         </div>
-        <div className="albums">
-          <h2 id="albums">Albums</h2>
-            {renderAlbums}
-        </div>
+        
+          <div className="albumsOuter">
+            <h2 id="albums">Albums</h2>
+              <div className="albumsInner">
+                {renderAlbums}
+              </div>  
+          </div>
         
         
       </div>
