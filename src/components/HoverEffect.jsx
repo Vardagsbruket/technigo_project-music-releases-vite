@@ -2,9 +2,9 @@
 export const HoverEffect = () => {
   return (
     <div className="icon-container">
-        <button className="icon heart"></button>
-        <button className="icon play"></button>
-        <button className="icon dots"></button>
+        <span className="button icon heart"></span>
+        <span className="button icon play"></span>
+        <span className="button icon dots"></span>
     </div>
   )
 }
