@@ -21,4 +21,3 @@ SinglesOnly.defaultProps = {
     artists: "Artist is missing",
     images: "Cover image is missing",
 };
-

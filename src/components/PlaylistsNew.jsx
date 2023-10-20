@@ -12,4 +12,3 @@ export const PlaylistsNew = ({ description, playlistUrl, images }) => {
 PlaylistsNew.defaultProps = {
     components: "No album name",
 };
-

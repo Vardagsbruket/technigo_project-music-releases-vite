@@ -1,9 +1,3 @@
-body {
-  margin: auto;
-  background-color: #000;
-  color:#fff;
-  font-family: Helvetica, sans-serif;
-}
 :root {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -13,9 +7,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-
-
-/*-- TYPOGRAPHY ------------ */
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -26,81 +17,144 @@ code {
 /*General*/
 body {
   background-color: #080808;
-  text-align: center;
+  text-align: left;
   font-family: Helvetica, sans-serif;
+  color:#fff;
 }
 .header {
   color: #ffffff;
   background-color:#000;
+  text-align:center;
+  padding:50px 0 10px 0;
 }
 h1 {
   color: #ffffff;
   text-align: center;
 }
-h2 {
+h2{
   color: #ffffff;
   font-size: 14px;
+  text-align:center;
+}
+.header h2{
+  color: #ffffff;
+  font-size: 14px;
+  /*text-align:center;*/
 }
 p{
   font-size:14px;
   color: #fff;
-}
-.subheading{
-  text-align:center;
-  font-size:18px;
+  line-height:12px;
 }
 
 
-/*NavBar*/
+/*--- NavBar -----------*/
 .navBar {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  padding:10px 0 20px 0;
 }
 .navBar li {
   display: inline;
   margin: 10px;
-  
 }
 .navBar a {
   text-decoration: none;
   color: #ffffff;
   list-style: none;
 }
+button{
+  background-color:rgb(9, 121, 9);
+  border:1px solid #046e10;
+  padding:5px 10px;
+  color:#fff;
+  border-radius:2px;
+  font-weight:bold;
+}
+button:hover{
+  transition: transform .2s;
+  opacity:0.8;
+}
 
-/*Main container*/
+/*--- Main container --------*/
 .musicOuter {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  background-color: #080808;
 }
-.album {
-  padding: 2rem;
-  background-color: black;
+.playlistOuter, .singles, .albumsOuter {
+  /*background-color: #131212;
+  padding: 10px;*/
+  border-radius:5px;
+  text-align:left;
 }
-.albumCover {
-  color: #ffffff;
+.singlesOnly{
+  background-color: #131212;
+  border-radius:3px;
+  margin:5px 0 5px 0;
+  padding:0 10px 0 0;
 }
-.albumName {
-  font-family: Helvetica, sans-serif;
-  font-size: 14px;
-  color: #ffffff;
+
+
+/*--- Playlist styling -----------*/
+.playlistOuter {
+  padding: 10px;
+  border-radius:5px;
+  text-align:left;
 }
-.artistName {
-  font-family: Helvetica, sans-serif;
-  font-size: 14px;
+.playlist{
+  display:flex;
+  background-color: #131212;
+  border-radius:3px;
+  margin:0 0 5px 0;
+  padding:0 10px 0 0;
+}
+.playlist p a{
+  line-height:18px;
+}
+#playlistImg {
+  display: block;
+  max-width: 70px;
+  max-height: 70px;
+  width: auto;
+  height: auto;
+  margin:0 15px 0px 0;
+}
+.playlistInner a {
+  font-size: 12px;
   color: #ffffff;
   text-decoration: none;
 }
-.artistName  {
-  /*font-family: Helvetica, sans-serif;
-  font-size: 14px;*/
+
+
+/*-- Albums & Singles --------------*/
+.singlesOnly, .albumsOnly {
+  /*background-color: #131212;*/
+  padding:10px;
+}
+.singlesCover, .albumsCover {
+  color: #ffffff;
+}
+.albumName a,
+.singleName a,
+.albumArtist a, 
+.singleArtist a{
   color: #a0a0a0;
   text-decoration: none;
 }
+.albumName a p,
+.singleName a p{
+  font-weight:bold;
+  color:#fff;
+  padding-bottom:2px;
+}
+
+
 a:hover {
   text-decoration: underline;
   color: #ffffff;
 }
+
+
 
 /*-- ALBUM COVER ------------ */
 .albumsCover, .singlesCover {
@@ -133,7 +187,6 @@ img{
 .icon-container:hover{
   opacity:1;
 }
-
 .button{
   background-color:transparent;
   height:30px;
@@ -144,7 +197,6 @@ img{
   background-color: white;
     -webkit-mask:  url(../src/assets/icons/heart.svg) no-repeat 50% 50%;
     mask: url(./heart.svg) no-repeat 50% 50%;
-    
 }
 .button.dots{
   background-color: white;
@@ -157,36 +209,31 @@ img{
     mask: url(./play.svg) no-repeat 50% 50%;
     transform: scale(1.6);
 }
-
 .icon{
   margin:0 10px;
   transition: transform .2s;
   opacity:.7;
   top:200px;
 }
-
 .button.play:hover{
   display:block;
   opacity:1;
   transform: scale(1.7);
 }
-
 .button.dots:hover, .button.heart:hover{
   display:block;
   opacity:1;
   transform: scale(1.1);
 }
-
-
-a{
+/*a{
   text-decoration:none;
   color:#fff;
-}
+}*/
 
 
 
 
-/* Mobile */
+/*-- Mobile ----------*/
 @media (min-width: 400px) {
   .musicOuter {
   display: grid;
@@ -194,7 +241,9 @@ a{
   }
 }
 
-/* Tablet */
+
+
+/*--- Tablet ----------*/
 @media (min-width: 750px) {
   .musicOuter {
   display: grid;
@@ -272,7 +321,6 @@ a{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-content: start;
-    /*border: 2px solid greenyellow;*/
     gap: 10px;
   }
 }
