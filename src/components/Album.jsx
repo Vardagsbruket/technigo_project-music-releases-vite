@@ -8,9 +8,8 @@ export const Album = ({name, artists, images, albumUrl}) => {
     return (
         <div className="album">
             <CoverImage images={images} albumUrl={albumUrl} /> 
-            <AlbumName name={name} />
-            <ArtistName artists={artists} /> 
-             
+            <AlbumName name={name} albumUrl={albumUrl} />
+            <ArtistName artists={artists} artistUrl={artistUrl}/>  
         </div>
         //<div className="singles">
 
@@ -22,4 +21,5 @@ Album.defaultProps = {
     name: "Album is missing",
     artists: "Artist is missing",
     images: "Cover image is missing",
+    artistUrl:"https://www.google.se/?hl=sv"
 };
