@@ -1,4 +1,4 @@
-export const SingleArtist = ({artists, album_type}) => {
+export const SingleArtist = ({artists, album_type, release_date, total_tracks}) => {
 
     const selectArtist = album_type === "single" ? artists : [];
    
@@ -12,6 +12,8 @@ export const SingleArtist = ({artists, album_type}) => {
     return (
         <div className="singleArtist">
             <a href={artistUrl}><p>{artistNames}</p></a>
+            <p>Release date: {release_date}</p>
+            <p>Total tracks: {total_tracks}</p>
         </div>
     )
 }
