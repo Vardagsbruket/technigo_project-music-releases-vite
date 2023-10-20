@@ -64,18 +64,7 @@ p{
   color: #ffffff;
   list-style: none;
 }
-button{
-  background-color:rgb(9, 121, 9);
-  border:1px solid #046e10;
-  padding:5px 10px;
-  color:#fff;
-  border-radius:2px;
-  font-weight:bold;
-}
-button:hover{
-  transition: transform .2s;
-  opacity:0.8;
-}
+
 
 /*--- Main container --------*/
 .musicOuter {
