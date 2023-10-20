@@ -1,6 +1,8 @@
 body {
   margin: auto;
   background-color: #000;
+  color:#fff;
+  font-family: Helvetica, sans-serif;
 }
 :root {
   margin: 0;
@@ -13,7 +15,7 @@ body {
 
 
 
-
+/*-- TYPOGRAPHY ------------ */
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -21,10 +23,26 @@ code {
 .MainHeader{
   background-color:#000;
 }
-h1, h2 {
+h1 {
   color:#fff;
   text-align: center;
 }
+h2{
+  font-size:14px;
+}
+p{
+  font-size:14px;
+}
+.subheading{
+  text-align:center;
+  font-size:18px;
+}
+
+
+
+
+
+
 .musicOuter {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -32,7 +50,8 @@ h1, h2 {
 }
 .album {
   padding: 2rem;
-  background-color: rgb(48, 47, 47);
+  /*background-color: rgb(48, 47, 47);*/
+  background-color: #000;
 }
 
 /*-- ALBUM COVER ------------ */
@@ -57,7 +76,7 @@ img{
   top:0;
   left:0;
   position:absolute;
-  background:rgba(0, 0, 0, 0.6);
+  background:rgba(0, 0, 0, 0.8);
   display:flex;
   justify-content:center;
   align-items:center;
@@ -78,6 +97,7 @@ button.heart{
   background-color: white;
     -webkit-mask:  url(../src/assets/icons/heart.svg) no-repeat 50% 50%;
     mask: url(./heart.svg) no-repeat 50% 50%;
+    
 }
 button.dots{
   background-color: white;
@@ -88,6 +108,7 @@ button.play{
   background-color: white;
     -webkit-mask:  url(../src/assets/icons/play.svg) no-repeat 50% 50%;
     mask: url(./play.svg) no-repeat 50% 50%;
+    transform: scale(1.6);
 }
 
 .icon{
@@ -96,45 +117,71 @@ button.play{
   opacity:.7;
   top:200px;
 }
-.icon:hover{
+/*.icon:hover{
   display:block;
   transform: scale(1.2);
   opacity:1;
+}*/
+
+button.play:hover{
+  display:block;
+  opacity:1;
+  transform: scale(1.7);
+}
+
+button.dots:hover,
+button.heart:hover{
+  display:block;
+  opacity:1;
+  transform: scale(1.1);
 }
 
 
-
+a{
+  text-decoration:none;
+  color:#fff;
+}
 
 
 .albumName {
-  font-family: Helvetica, sans-serif;
+  /*font-family: Helvetica, sans-serif;
   font-size: 14px;
-  color: #ffffff;
+  color: #ffffff;*/
   margin-top: 1rem;
 }
 .albumName a {
-  font-family: Helvetica, sans-serif;
+  /*font-family: Helvetica, sans-serif;
   font-size: 14px;
-  color: #ffffff;
+  color: #ffffff;*/
   text-decoration: none;
 }
 .artistName  {
-  font-family: Helvetica, sans-serif;
-  font-size: 14px;
+  /*font-family: Helvetica, sans-serif;
+  font-size: 14px;*/
   color: #a0a0a0;
 }
-.artistName a {
-  font-family: Helvetica, sans-serif;
-  font-size: 14px;
-  color: #a0a0a0;
+a .artistName:hover  {
+  /*font-family: Helvetica, sans-serif;
+  font-size: 14px;*/
+  color: #fff;
 }
+
+.artistNameLink{
+  display:inline-block;
+}
+
 
 
 a:hover {
   text-decoration:underline;
   color: #ffffff;
 }
-/* Mobile */
+
+
+
+
+
+/*--- Mobile -----------*/
 @media (min-width: 400px) {
   .musicOuter {
   display: grid;
