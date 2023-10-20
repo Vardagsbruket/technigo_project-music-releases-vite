@@ -51,8 +51,8 @@ export const App = () => {
   const renderPlaylists = renderPlaylistInfo();
 
   const renderSinglesInfo = () => 
-    data.albums.items.map(
-      ({id, name, album_type, artists, images, external_urls}) => (
+    data.albums.items.filter((album) => album.album_type === "single").map(
+      ({id, name, album_type, artists, images, external_urls, release_date, total_tracks}) => (
         <SinglesOnly 
           key={id}
           name={name}
@@ -60,13 +60,15 @@ export const App = () => {
           images={images}
           albumUrl={external_urls.spotify}
           album_type={album_type}
+          release_date={release_date}
+          total_tracks={total_tracks}
         />
       )
     );
       const renderSingles = renderSinglesInfo();
 
     const renderAlbumsInfo = () => 
-      data.albums.items.map(
+      data.albums.items.filter((album) => album.album_type === "album").map(
         ({id, name, album_type, artists, images, external_urls, release_date, total_tracks}) => (
           <AlbumsOnly 
             key={id}
