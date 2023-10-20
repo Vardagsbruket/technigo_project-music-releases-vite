@@ -22,4 +22,3 @@ CoverImage.defaultProps = {
     //images: ["No cover image"]
 };
 
-//images[1].ulr.map

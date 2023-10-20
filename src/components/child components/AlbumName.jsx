@@ -7,6 +7,8 @@ export const AlbumName = ({ name, albumUrl }) => {
     );
 };
 
+
+
 AlbumName.defaultProps = {
     name: "No album name",
 };
