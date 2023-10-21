@@ -14,7 +14,9 @@ code {
 .albumInfo {
   color: #fff;
 }
-/*General*/
+
+
+/*--- General ----------*/
 body {
   background-color: #080808;
   text-align: left;
@@ -33,7 +35,7 @@ h1 {
 }
 h2{
   color: #ffffff;
-  font-size: 14px;
+  font-size: 18px;
   text-align:center;
 }
 .header h2{
@@ -64,7 +66,12 @@ p{
   color: #ffffff;
   list-style: none;
 }
-
+button{
+  padding:5px 10px;
+}
+button:hover{
+  opacity:0.8;
+}
 
 /*--- Main container --------*/
 .musicOuter {
@@ -76,8 +83,9 @@ p{
   border-radius:5px;
   text-align:left;
 }
+
 .singlesOnly{
-  background-color: #131212;
+  background-color: #191818;
   border-radius:3px;
   margin:5px 0 5px 0;
   padding:0 10px 0 0;
@@ -86,16 +94,20 @@ p{
 
 /*--- Playlist styling -----------*/
 .playlistOuter {
-  padding: 10px;
+  /*padding: 10px;*/
   border-radius:5px;
   text-align:left;
 }
+
 .playlist{
-  display:flex;
-  background-color: #131212;
+  background-color: #191818;
   border-radius:3px;
   margin:0 0 5px 0;
-  padding:0 10px 0 0;
+  padding:10px;
+  align-items:center;
+}
+.playlistInner {
+  margin:10px;
 }
 .playlist p a{
   line-height:18px;
@@ -137,11 +149,11 @@ p{
   padding-bottom:2px;
 }
 
-
 a:hover {
   text-decoration: underline;
   color: #ffffff;
 }
+
 
 
 
@@ -223,6 +235,9 @@ img{
 
 
 /*-- Mobile ----------*/
+@media (max-width: 400px) {
+ 
+}
 @media (min-width: 400px) {
   .musicOuter {
   display: grid;
@@ -233,6 +248,16 @@ img{
 
 
 /*--- Tablet ----------*/
+@media (max-width: 750px){
+  .playlist{
+    display:flex;
+  }
+  .playlistInner a {
+    font-size: 14px;
+    line-height:20px;
+  }
+}
+
 @media (min-width: 750px) {
   .musicOuter {
   display: grid;
@@ -254,6 +279,7 @@ img{
     align-items: center;
     gap: 5px;
   }
+  
   .singles {
     grid-column: 2/3;
     display: flex;
