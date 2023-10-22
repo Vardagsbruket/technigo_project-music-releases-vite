@@ -1,20 +1,12 @@
-export const SingleArtist = ({artists, release_date, total_tracks}) => {
+export const SingleArtist = ({ artists, album_type, release_date, total_tracks }) => {
+    
+  const selectArtist = album_type === "single" ? artists : [];
 
-  //const selectArtist = album_type === "single" ? artists : [];
- console.log(release_date, total_tracks)
-
-  //const artistNames = selectArtist.map(({name}) => name).join(", ");
-  
-  //const artistUrl = artists[0].external_urls.spotify;
-
-
-  const artistLinks = artists.map((artist, index) => (
-      <span key={index}>
-          <a href={artist.external_urls.spotify}>
-              {artist.name}
-          </a>
-          {index < artists.length - 1 && ', '}
-      </span>
+  const artistLinks = selectArtist.map((artist, index) => (
+      <a key={index} href={artist.external_urls.spotify}>
+        {artist.name}
+        {index < selectArtist.length - 1 && ', '}
+      </a>
     ));
 
   return (
@@ -25,11 +17,3 @@ export const SingleArtist = ({artists, release_date, total_tracks}) => {
     </div>
   );
 };
-
-
-//const renderArtistNames = () => artists.map(
-  //({name}) => name + ", "
-  //);
-
-  // const selectArtist = artists
-  //if (album_type === "single")

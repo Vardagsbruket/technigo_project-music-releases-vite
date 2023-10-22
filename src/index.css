@@ -78,23 +78,17 @@ button:hover{
   background-color: #080808;
 }
 .playlistOuter, .singles, .albumsOuter {
-  /*background-color: #131212;
-  padding: 10px;*/
   border-radius:5px;
   text-align:left;
 }
 
-.singlesOnly{
-  background-color: #191818;
-  border-radius:3px;
-  margin:5px 0 5px 0;
-  padding:0 10px 0 0;
+.musicCard{
+  padding:5px;
 }
 
 
 /*--- Playlist styling -----------*/
 .playlistOuter {
-  /*padding: 10px;*/
   border-radius:5px;
   text-align:left;
 }
@@ -128,13 +122,6 @@ button:hover{
 
 
 /*-- Albums & Singles --------------*/
-.singlesOnly, .albumsOnly {
-  /*background-color: #131212;*/
-  padding:10px;
-}
-.singlesCover, .albumsCover {
-  color: #ffffff;
-}
 .albumName a,
 .singleName a,
 .albumArtist a, 
@@ -148,7 +135,6 @@ button:hover{
   color:#fff;
   padding-bottom:2px;
 }
-
 a:hover {
   text-decoration: underline;
   color: #ffffff;
@@ -249,6 +235,14 @@ img{
 
 /*--- Tablet ----------*/
 @media (max-width: 750px){
+  .musicCard{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+    
+  }
   .playlist{
     display:flex;
   }
